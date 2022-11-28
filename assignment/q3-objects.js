@@ -16,7 +16,11 @@ const bookTitle = ["Lord of the Rings", "Programming for Dummies", "Introduction
 let booksObj = {}; 
 
 function convert(keyArr, valueArr){
-    
+    var convertedArr = {};
+    for (let index = 0; index < keyArr.length; index++) {
+        convertedArr[keyArr[index]] = valueArr[index]      
+    }
+    return convertedArr;
     // Add code here
     /*
         Tips:
@@ -29,7 +33,7 @@ function convert(keyArr, valueArr){
 
 function printByKey(key){
     console.log(booksObj[key]);
-}
+} 
 
 booksObj = convert(bookIdArr, bookTitle);
 printByKey("NLB2"); // prints "Progamming for Dummies"
